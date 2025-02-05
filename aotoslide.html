@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+    animation: fadeEffect 100s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="1.jpg" alt="Image 1">
+        </div>
+        <div class="slide fade">
+            <img src="2.jpg" alt="Image 2">
+        </div>
+        <div class="slide fade">
+            <img src="3.jpg" alt="Image 3">
+        </div>
+    </div>
+
+    <script >
+        let currentIndex = 0;
+
+function showSlides() {
+    let slides = document.querySelectorAll(".slide");
+    slides.forEach((slide, index) => {
+        slide.style.display = "none";
+    });
+
+    currentIndex++;
+    if (currentIndex > slides.length) {
+        currentIndex = 1;
+    }
+
+    slides[currentIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // 3000ms = 3 seconds
+}
+
+document.addEventListener("DOMContentLoaded", showSlides);
+
+    </script>
+</body>
+</html>

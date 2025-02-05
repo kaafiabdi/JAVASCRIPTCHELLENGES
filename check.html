@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        ul{
+            background-color: black;
+            color: white;
+            padding: 20px;
+            width: 180px;
+            border-radius: 10px;
+        }
+        ul li{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+    <div class="form">
+        <input type="text" id="input" placeholder="write here...">
+        <button >click</button>
+    </div>
+
+    <ul id="ul">
+
+    </ul>
+
+
+    <script>
+        let input = document.querySelector('#input')
+        let ul = document.querySelector('#ul')
+        let button = document.querySelector('button')
+
+
+        // function inputvalue(){
+        //     let value = input.value
+        // }
+
+        // let li = document.createElement('li')
+        // ul.append(li)
+        // li.textContent = inputvalue()
+
+        button.addEventListener('click', (event)=>{
+            function inputvalue(){
+                return input.value.split('').reverse().join('')
+            }
+            
+            let li = document.createElement('li')
+            ul.append(li)
+            li.textContent=inputvalue()
+            let span = document.createElement('span')
+            span.innerHTML='<i class="fa-solid fa-trash"></i>'
+            li.append(span)
+
+            span.addEventListener('click',()=>{
+                li.remove();
+            })
+
+
+
+
+        })
+
+        
+
+
+
+
+
+
+
+
+       
+        
+      
+      
+
+
+      
+    </script>
+    
+    
+</body>
+</html>

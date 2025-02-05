@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .red{
+            background-color: red;
+            border: none;
+            padding: 5px 20px;
+            font-size: 30px;
+            color: white;
+        }
+        .black{
+            background-color: black;
+            border: none;
+            padding: 5px 20px;
+            font-size: 30px;
+            color: white;
+        }
+        .blou{
+            background-color: blue;
+            border: none;
+            padding: 5px 20px;
+            font-size: 30px;
+            color: white;
+        }
+        .green{
+            background-color: green;
+            border: none;
+            padding: 5px 20px;
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>color flip</h2>
+    <div class="btn">
+        <button class="red">red</button>
+        <button class="blou">blou</button>
+        <button class="green">green</button>
+        <button class="black">black</button>
+    </div>
+
+
+    <script>
+        let redbutton = document.querySelector('.red') 
+        let bloubutton = document.querySelector('.blou') 
+        let greenbutton = document.querySelector('.green') 
+        let blackbutton = document.querySelector('.black')
+        let body = document.querySelector('body') 
+        
+
+
+
+        redbutton.addEventListener('click', ()=>{
+            body.style.background='red';
+        })
+
+      
+
+        greenbutton.addEventListener('click', ()=>{
+            body.style.background='green';
+        })
+
+        blackbutton.addEventListener('click', ()=>{
+            body.style.background='black';
+        })
+
+        bloubutton.addEventListener('click', ()=>{
+            body.style.background='blue';
+        })
+
+
+
+
+
+    </script>
+</body>
+</html>
